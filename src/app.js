@@ -45,7 +45,7 @@ app.get('/weather', (req, res) => {
     if (!req.query.address) {
         return res.send({
             error: {
-                message: 'Address must be included in request'
+                message: 'Address must be included in request!'
             }
         })
     }
