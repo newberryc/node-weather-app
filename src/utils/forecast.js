@@ -19,10 +19,10 @@ const forecast = (latitude, longitude, callback) => {
                 }
             })
         } else {
-            const { temperature, feelslike, weather_descriptions: descriptions } = body.current
+            const { temperature, feelslike, weather_descriptions: descriptions, uv_index } = body.current
             callback(undefined, {
                 message: 'Success',
-                forecastDescription: 'It is currently ' + descriptions[0] + ' and ' + temperature + ' degrees out.  It feels like ' + feelslike + ' degrees out.'
+                forecastDescription: 'It is currently ' + descriptions[0] + ' and ' + temperature + ' degrees out.  It feels like ' + feelslike + ' degrees out.  The UV index is ' + uv_index + '.'
             })
         }
     })
